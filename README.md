@@ -1,7 +1,7 @@
 # css-architecture
 Proposal for an Inheritance and Composition Approach
 
-This is a proposal for a structured CSS class system which combines both composition and inheritance. It is guided largely by the [Functional CSS](https://blog.colepeters.com/building-and-shipping-functional-css/) approach, however also incorporates the practice of inheritance common in frameworks like [Twitter Bootstrap](http://getbootstrap.com/).
+This is a proposal for a structured CSS class system which combines both composition and inheritance. It is guided largely by the [Functional CSS](https://blog.colepeters.com/building-and-shipping-functional-css/) approach, however also incorporates the practice of inheritance common to frameworks such as [Twitter Bootstrap](http://getbootstrap.com/).
 
 [tldr;](#the-system)
 
