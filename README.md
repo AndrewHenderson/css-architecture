@@ -73,7 +73,7 @@ button.btn-large {
 ```html
 <button class=”btn-danger btn-large”></button>
 ```
-Again, when viewing this HTML, it is difficult for an engineer to know which set of rules the .btn-large modifier owns and which are owned by .btn-danger.
+Again, when viewing this HTML, it is difficult for an engineer to know which set of rules the `.btn-large` modifier owns and which are owned by `.btn-danger`.
 Do the two classes share rules? Do they conflict? If so, which one wins?
 He could look at the stylesheet, but if he needs to override the appearance, he’s more likely to simply append a utility and move on.
 
@@ -90,7 +90,7 @@ button {
  border: 1px solid;
 }
 ```
-And if we later choose to create a modifier such as .btn-danger,
+And if we later choose to create a modifier such as `.btn-danger`,
 ```css
 .btn-danger {
  color: white !important;
@@ -109,7 +109,7 @@ Allowing an engineer to change any of these introduces exceptions into the syste
 # The System
 ## Modifiers: a better approach through categorization
 ### Prefixing
-To signal this to the engineer, we can define different types of modifiers. For example, “.btn-danger” can be a color modifier, as it only defines a set of colors. So instead, we can prefix it with .c-
+To signal this to the engineer, we can define different types of modifiers. For example, `.btn-danger` can be a color modifier, as it only defines a set of colors. So instead, we can prefix it with `.c-`
 ```css
 button.c-danger {
  background-color: red !important;
@@ -117,7 +117,7 @@ button.c-danger {
  color: white !important;
 }
 ```
-.btn-large can be differentiated as a scaling modifier and prefixed with .s-.
+`.btn-large` can be differentiated as a scaling modifier and prefixed with `.s-`.
 ```css
 button.s-large {
  font-size: 24px !important;
@@ -140,7 +140,7 @@ This approach allows for utilities to coexist with modifiers - a mix of Composit
 ```
 ### Conditions: Platform, DOM placement, and State
 
-It’s much easier to manage conditions such as media queries in Functional CSS. However, if we are working with a modifier, rather than using a Functional approach, we can leverage a media query modifier: .mq-
+It’s much easier to manage conditions such as media queries in Functional CSS. However, if we are working with a modifier, rather than using a Functional approach, we can leverage a media query modifier: `.mq-`
 This is an override for a particular modifier with a media query modifier which despite the use of !important in both place, will win.
 ```html
 <button class=”c-danger s-large” data-mqs=”mqs-s-large”></button>
@@ -150,7 +150,7 @@ button.mqs-s-large {
  font-size: 18px !important;
 }
 ```
-The preceding button leverages the rules of .s-large, however it also employs an override for that particular modifier on small screens .mqs-s-large. Most importantly, this override is optional.
+The preceding button leverages the rules of `.s-large`, however it also employs an override for that particular modifier on small screens `.mqs-s-large`. Most importantly, this override is optional.
 ### Strict Enforcement
 I had been debated on whether a utility or modifier would take precedence.
 Traditionally the utility would win by using !important on all utilities. This seems obvious because the name is explicit: `.inline-block`
@@ -195,7 +195,7 @@ Masquerading HTML Elements
 <li class=“button”></li>
 <button class=“link”></button>
 ```
-Which is why in the prior examples I chose to use the button tag as the base rather than creating a .btn component. This forces us to only use buttons when they are actually buttons.
+Which is why in the prior examples I chose to use the button tag as the base rather than creating a `.btn` component. This forces us to only use buttons when they are actually buttons.
 
 ### Large Components
 Components which wrap large sections of HTML within the app (i.e. summary list, dialog, etc.)
