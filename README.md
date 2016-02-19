@@ -73,8 +73,8 @@ button.btn-large {
 ```html
 <button class=”btn-danger btn-large”></button>
 ```
-Again, when viewing this HTML, it is difficult for an engineer to know which set of rules the `.btn-large` modifier owns and which are owned by `.btn-danger`.
-Do the two classes share rules? Do they conflict? If so, which one wins?
+Again, when viewing this HTML, it is difficult for an engineer to know which set of rules the `.btn-large` modifier owns and which are owned by `.btn-danger`. Do the two modifiers share rules? Do they conflict? If so, which one wins?
+
 He could look at the stylesheet, but if he needs to override the appearance, he’s more likely to simply append a utility and move on.
 
 The preceding button scenario describes what Building and shipping functional CSS describes as a component:
@@ -82,7 +82,7 @@ The preceding button scenario describes what Building and shipping functional CS
 
 I believe we have to be disciplined about what we define as components within our CSS language.
 
-As a team, we should define only what all buttons actually share: properties which MUST be present that CANNOT deviate. Otherwise, one can no longer refer to it a “button.”
+As a team, we should define only what all buttons actually share: properties which *MUST* be present that *CANNOT* deviate. Otherwise, one can no longer refer to it as a `button`.
 
 We’ll probably find these components consist of very little.
 ```css
